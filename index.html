@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global SNS Optimizer | Free Web Tool</title>
+    <style>
+        :root { --accent: #00ffa3; --bg: #0a0a0a; --card: #161616; --text: #ececec; }
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 10px; display: flex; flex-direction: column; align-items: center; }
+        .ad-slot { width: 100%; max-width: 400px; height: 60px; background: #222; margin: 10px 0; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #555; border: 1px dashed #333; }
+        .container { width: 100%; max-width: 400px; background: var(--card); padding: 20px; border-radius: 15px; box-sizing: border-box; border: 1px solid #222; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { font-size: 1.2rem; margin-top: 0; color: var(--accent); }
+        textarea { width: 100%; height: 120px; background: #000; border: 1px solid #333; border-radius: 8px; color: #fff; padding: 12px; box-sizing: border-box; font-size: 16px; outline: none; transition: 0.3s; }
+        textarea:focus { border-color: var(--accent); }
+        .info { display: flex; justify-content: space-between; font-size: 12px; margin: 8px 0; color: #888; }
+        button { width: 100%; padding: 15px; background: var(--accent); color: #000; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; margin-top: 5px; }
+        .affiliate-box { margin-top: 20px; padding: 12px; background: #1a1a1a; border-radius: 8px; border-left: 4px solid var(--accent); font-size: 13px; text-align: left; }
+        .affiliate-box a { color: var(--accent); text-decoration: none; font-weight: bold; }
+        footer { margin-top: 20px; font-size: 10px; color: #444; }
+    </style>
+</head>
+<body>
+
+    <div class="ad-slot">
+        ADVERTISEMENT
+    </div>
+
+    <div class="container">
+        <h1>Post Optimizer</h1>
+        <textarea id="txt" placeholder="Paste your text here..." oninput="update()"></textarea>
+        
+        <div class="info">
+            <span id="count">Chars: 0</span>
+            <span>Global Edition v1.0</span>
+        </div>
+
+        <button onclick="copy()">Add Tags & Copy</button>
+
+        <div class="affiliate-box">
+            🚀 <b>Special Offer:</b><br>
+            Boost your SNS followers with <a href="#">This Free AI Guide</a>.
+        </div>
+    </div>
+
+    <div class="ad-slot">
+        ADVERTISEMENT
+    </div>
+
+    <footer>&copy; 2026 Global Tool Studio</footer>
+
+    <script>
+        function update() {
+            const val = document.getElementById('txt').value;
+            document.getElementById('count').innerText = "Chars: " + val.length;
+        }
+
+        function copy() {
+            const input = document.getElementById('txt');
+            if(!input.value) return;
+            
+            // 海外SNSでバズりやすいタグを自動追加
+            const tags = "\n\n#trending #viral #foryou #global #growth";
+            const final = input.value + tags;
+            
+            navigator.clipboard.writeText(final).then(() => {
+                alert("Optimized and Copied!");
+            });
+        }
+    </script>
+</body>
+</html>

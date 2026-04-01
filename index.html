@@ -7,7 +7,7 @@
     <style>
         :root { --accent: #00ffa3; --bg: #0a0a0a; --card: #161616; --text: #ececec; }
         body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 10px; display: flex; flex-direction: column; align-items: center; }
-        .ad-slot { width: 100%; max-width: 400px; height: 60px; background: #222; margin: 10px 0; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #555; border: 1px dashed #333; }
+        .ad-slot { width: 100%; max-width: 400px; margin: 15px 0; text-align: center; }
         .container { width: 100%; max-width: 400px; background: var(--card); padding: 20px; border-radius: 15px; box-sizing: border-box; border: 1px solid #222; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         h1 { font-size: 1.2rem; margin-top: 0; color: var(--accent); }
         textarea { width: 100%; height: 120px; background: #000; border: 1px solid #333; border-radius: 8px; color: #fff; padding: 12px; box-sizing: border-box; font-size: 16px; outline: none; transition: 0.3s; }
@@ -22,8 +22,11 @@
 <body>
 
     <div class="ad-slot">
-        ADVERTISEMENT
-    </div>
+        <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+            <iframe data-aa='2432619' src='//acceptable.a-ads.com/2432619/?size=Adaptive'
+                    style='border:0; padding:0; width:100%; height:auto; min-height:60px; overflow:hidden;display: block;margin: auto'></iframe>
+        </div>
+        </div>
 
     <div class="container">
         <h1>Post Optimizer</h1>
@@ -34,7 +37,7 @@
             <span>Global Edition v1.0</span>
         </div>
 
-        <button onclick="copy()">Add Tags & Copy</button>
+        <button onclick="copy()">Optimize & Copy</button>
 
         <div class="affiliate-box">
             🚀 <b>Special Offer:</b><br>
@@ -43,8 +46,11 @@
     </div>
 
     <div class="ad-slot">
-        ADVERTISEMENT
-    </div>
+        <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+            <iframe data-aa='2432619' src='//acceptable.a-ads.com/2432619/?size=Adaptive'
+                    style='border:0; padding:0; width:100%; height:auto; min-height:60px; overflow:hidden;display: block;margin: auto'></iframe>
+        </div>
+        </div>
 
     <footer>&copy; 2026 Global Tool Studio</footer>
 
@@ -58,7 +64,6 @@
             const input = document.getElementById('txt');
             if(!input.value) return;
             
-            // 海外SNSでバズりやすいタグを自動追加
             const tags = "\n\n#trending #viral #foryou #global #growth";
             const final = input.value + tags;
             
